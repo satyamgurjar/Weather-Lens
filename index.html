@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="weather-container">
+        <!--Search Form-->
+        <form class="form-container" data-searchForm>
+          <input placeholder="Search For City" data-searchInput />
+          <button class="btn" type="submit">
+            <img
+              src="./assets/search.png"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!--show Weather info-->
+        <div class="sub-container user-info-container">
+          <div class="name">
+            <p data-cityName></p>
+          </div>
+          <p data-weatherDescription></p>
+          <img data-weatherIcon />
+          <p data-temp></p>
+          <!--Cards Parameter-->
+          <div class="parameter-container">
+            <!--Card 1-->
+            <div class="container">
+              <img src="./assets/wind-1.png" />
+              <p>Wind Speed</p>
+              <p data-windSpeed></p>
+            </div>
+
+            <!--Card 2-->
+            <div class="container">
+              <img src="./assets/humidity.png" />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <!--Card 3-->
+            <div class="container">
+              <img src="./assets/cloud.png" />
+              <p>Clouds</p>
+              <p data-cloudiness></p>
+            </div>
+            <!--Card 4-->
+            <div class="container">
+              <img src="./assets/Thermometer_Min_icon.png" />
+              <p>Min. Temp.</p>
+              <p data-minTemp>29.56</p>
+            </div>
+            <!--Card 5-->
+            <div class="container">
+              <img src="./assets/Thermometer_Max_icon.png" />
+              <p>Max. Temp.</p>
+              <p data-maxTemp>29.56</p>
+            </div>
+          </div>
+          <button id="forecast" class="btn" type="submit">
+            Click for Next 5 days weather
+          </button>
+          <!--5 days forecast-->
+        <div class="parameter-container" id="forecast-container">
+            <!--Card for day 1-->
+            <div class="f-container">
+
+                <div class="container1">
+                    <img day1-icon/>
+                    <p day-1 style="font-size: 1.25rem;border: solid white 1px;border-radius: 5px;"></p>
+                  <p day1-temp></p>
+                </div>
+                <p id="day1"></p>
+            </div>
+            <!--Card for day 2-->
+            <div class="f-container">
+
+                <div class="container1">
+                    <img day2-icon/>
+                    <p day-2 style="font-size: 1.25rem;border: solid white 1px;border-radius: 5px;"></p>
+                    <p day2-temp></p>
+                </div>
+                <p id="day2"></p>
+            </div>
+  
+            <!--Card for day 3-->
+            <div class="f-container">
+
+                <div class="container1">
+                    <img day3-icon/>
+                    <p day-3 style="font-size: 1.25rem;border: solid white 1px;border-radius: 5px;"></p>
+                    <p day3-temp></p>
+                </div>
+                <p id="day3"></p>
+            </div>
+            <!--Card for day 4-->
+            <div class="f-container">
+                <div class="container1">
+                    <img day4-icon/>
+                    <p day-4 style="font-size: 1.25rem;border: solid white 1px;border-radius: 5px;"></p>
+                    <p day4-temp></p>
+                </div>
+                <p id="day4"></p>
+            </div>
+            <!--Card for day 5-->
+            <div class="f-container">
+
+                <div class="container1">
+                    <img day5-icon/>
+                    <p day-5 style="font-size: 1.25rem;border: solid white 1px;border-radius: 5px;"></p>
+                    <p day5-temp></p>
+                </div>
+                <p id="day5"></p>
+            </div>
+        </div>
+        <button class="btn toggle" toggle-btn>Click to see Temperature in °C</button>
+        </div>
+        <div class="notFound">
+          <img src="./assets/not-found.png" alt="" />
+        </div>
+        <!--loading Screen container-->
+        <div class="sub-container loading-container">
+          <img src="./assets/loading.gif" width="150" height="150" />
+          <p>Loading</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
